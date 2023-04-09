@@ -1,4 +1,6 @@
-import {StatisticItem} from 'components/Statistics/StatisticItem'
+import PropTypes from 'prop-types';
+import { StatisticItem } from 'components/Statistics/StatisticItem'
+
 
 export const Statistics = ({ title = '', stats = [] }) => {
     return (
@@ -12,3 +14,8 @@ export const Statistics = ({ title = '', stats = [] }) => {
 </section>
     )
 }
+
+Statistics.propTypes = {
+  label: PropTypes.string.isRequired,
+  percentage: PropTypes.number.isRequired,
+};
